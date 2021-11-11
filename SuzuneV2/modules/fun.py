@@ -376,7 +376,7 @@ TABLE_HANDLER = DisableAbleCommandHandler("table", table)
 SHOUT_HANDLER = DisableAbleCommandHandler("shout", shout)
 WEEBIFY_HANDLER = DisableAbleCommandHandler("weebify", weebify)
 WARNING_HANDLER = DisableAbleMessageHandler(
-    Filters.regex(r"(?i)(love|I love you)"), goodmorning, friendly="ilu"
+    Filters.regex(r"(?i)(love|I love you)"), , friendly="ilu"
 )
 DIE_HANDLER = DisableAbleMessageHandler(
     Filters.regex(r"(?i)(die|death)"), goodnight, friendly="marna"
