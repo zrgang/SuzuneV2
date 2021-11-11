@@ -4,12 +4,12 @@ import re
 import os
 import html
 import requests
-import SuzuneBot.modules.sql.kuki_sql as sql
+import SuzuneV2.modules.sql.kuki_sql as sql
 
 from time import sleep
 from telegram import ParseMode
-from SuzuneBot import dispatcher, updater, SUPPORT_CHAT
-from SuzuneBot.modules.log_channel import gloggable
+from SuzuneV2 import dispatcher, updater, SUPPORT_CHAT
+from SuzuneV2.modules.log_channel import gloggable
 from telegram import (CallbackQuery, Chat, MessageEntity, InlineKeyboardButton,
                       InlineKeyboardMarkup, Message, ParseMode, Update, Bot, User)
 
@@ -19,8 +19,8 @@ from telegram.ext import (CallbackContext, CallbackQueryHandler, CommandHandler,
 
 from telegram.error import BadRequest, RetryAfter, Unauthorized
 
-from SuzuneBot.modules.helper_funcs.filters import CustomFilters
-from SuzuneBot.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
+from SuzuneV2.modules.helper_funcs.filters import CustomFilters
+from SuzuneV2.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
 
 from telegram.utils.helpers import mention_html, mention_markdown, escape_markdown
 
