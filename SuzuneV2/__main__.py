@@ -75,8 +75,10 @@ def get_readable_time(seconds: int) -> str:
 INNEXIA_IMG = "https://telegra.ph/file/8b6f8f2bb4ff3912634c7.jpg"
 
 PM_START_TEXT = """
-`Heya` 🤗 `I am` **INNEXIA** `your group super bot`
-`I am very fast and  more efficient  I provide awesome  features which a owner will look for  filter ,warn system,note keeping system flood!`
+────「 𝐒ᴜᴢᴜɴᴇ 𝐇ᴏʀɪᴋɪᴛᴀ 」────
+𝐇𝐞𝐥𝐥𝐨 𝐞𝐯𝐞𝐫𝐲𝐨𝐧𝐞 𝐭𝐡𝐢𝐬 𝐢𝐬 𝐬𝐮𝐳𝐮𝐧𝐞 𝐭𝐡𝐢𝐬 𝐬𝐢𝐝𝐞. 𝐀𝐬 𝐲𝐨𝐮 𝐤𝐧𝐨𝐰 𝐭𝐡𝐚𝐭 𝐦𝐲 𝐝𝐫𝐞𝐚𝐦 𝐢𝐬 𝐭𝐨 𝐛𝐞 𝐢𝐧 𝐜𝐥𝐚𝐬𝐬 𝐀 𝐬𝐨 𝐢𝐧 𝐭𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐜𝐥𝐚𝐬𝐬 𝐀 𝐢𝐬 𝐭𝐨 𝐛𝐞 𝐭𝐡𝐞 𝐛𝐞𝐬𝐭 𝐛𝐨𝐭.
+
+𝐏𝐫𝐞𝐬𝐬 /help 𝐓𝐨 𝐒𝐞𝐞 𝐀𝐥𝐥 𝐌𝐲 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐋𝐢𝐬𝐭.
 """
 
 buttons = [
