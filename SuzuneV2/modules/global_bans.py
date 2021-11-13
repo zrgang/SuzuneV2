@@ -17,18 +17,7 @@ from telegram.utils.helpers import mention_html
 import SuzuneV2.modules.sql.global_bans_sql as sql
 from SuzuneV2.modules.sql.users_sql import get_user_com_chats
 from SuzuneV2 import (
-    DEV_USERS,
-    EVENT_LOGS,
     OWNER_ID,
-    STRICT_GBAN,
-    DRAGONS,
-    SUPPORT_CHAT,
-    SPAMWATCH_SUPPORT_CHAT,
-    DEMONS,
-    TIGERS,
-    WOLVES,
-    sw,
-    dispatcher,
 )
 from SuzuneV2.modules.helper_funcs.chat_status import (
     is_user_admin,
