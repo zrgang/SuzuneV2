@@ -195,7 +195,7 @@ def demote(update: Update, context: CallbackContext) -> str:
 @bot_admin
 @can_promote
 @user_admin
-@loggable(command("fullpromote"))
+@loggable(bot_cmd("fullpromote"))
 async def promote(_, message):
     try:
         from_user_id = message.from_user.id
