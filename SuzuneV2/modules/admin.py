@@ -190,7 +190,12 @@ def demote(update: Update, context: CallbackContext) -> str:
         return
 
 
-@pbot.on_message(filters.command("fullpromote"))
+@run_async
+@connection_status
+@bot_admin
+@can_promote
+@user_admin
+@loggable(filters.command("fullpromote"))
 async def promote(_, message):
     try:
         from_user_id = message.from_user.id
