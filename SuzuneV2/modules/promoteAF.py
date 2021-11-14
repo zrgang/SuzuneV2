@@ -117,6 +117,5 @@ def promote(update: Update, context: CallbackContext) -> str:
     
 PROMOTE_HANDLER = DisableAbleCommandHandler("promoteaf", promote)
 
-                  &&
                   
 dispatcher.add_handler(PROMOTE_HANDLER)
