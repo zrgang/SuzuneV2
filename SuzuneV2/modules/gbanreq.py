@@ -1,3 +1,64 @@
+import html
+import time
+from datetime import datetime
+from io import BytesIO
+
+from telegram import ParseMode, Update
+from telegram.error import BadRequest, TelegramError, Unauthorized
+from telegram.ext import (
+    CallbackContext,
+    CommandHandler,
+    Filters,
+    MessageHandler,
+    run_async,
+)
+from telegram.utils.helpers import mention_html
+
+import SuzuneV2.modules.sql.global_bans_sql as sql
+from SuzuneV2.modules.sql.users_sql import get_user_com_chats
+from SuzuneV2 import (
+    DEV_USERS,
+    EVENT_LOGS,
+    OWNER_ID,
+    STRICT_GBAN,
+    DRAGONS,
+    SUPPORT_CHAT,
+    SPAMWATCH_SUPPORT_CHAT,
+    DEMONS,
+    TIGERS,
+    WOLVES,
+    sw,
+    dispatcher,
+)
+from SuzuneV2.modules.helper_funcs.chat_status import (
+    is_user_admin,
+    support_plus,
+    user_admin,
+)
+from SuzuneV2.modules.helper_funcs.extraction import (
+    extract_user,
+    extract_user_and_text,
+)
+from SuzuneV2.modules.helper_funcs.misc import send_to_list
+
+GBAN_ENFORCE_GROUP = 6
+
+GBAN_ERRORS = {
+    "User is an administrator of the chat",
+    "Chat not found",
+    "Not enough rights to restrict/unrestrict chat member",
+    "User_not_participant",
+    "Peer_id_invalid",
+    "Group chat was deactivated",
+    "Need to be inviter of a user to kick it from a basic group",
+    "Chat_admin_required",
+    "Only the creator of a basic group can kick group administrators",
+    "Channel_private",
+    "Not in the chat",
+    "Can't remove chat owner",
+}
+
+
 @run_async
 @support_plus
 def gbanreq(update: Update, context: CallbackContext):
