@@ -352,7 +352,7 @@ def Suzune_about_callback(update, context):
     query = update.callback_query
     if query.data == "Suzune_":
         query.message.edit_text(
-            text=""" 𝗜𝗡𝗡𝗘𝗫𝗜𝗔 - A bot to manage your groups with additional features!
+            text=""" SUZUNE - A bot to manage your groups with additional features!
             \nHere's the basic help regarding use of Innexia.
             
             \nAlmost all modules usage defined in the help menu, checkout by sending `/help`
@@ -387,7 +387,7 @@ def Suzune_about_callback(update, context):
             text=f"*Here's basic Help regarding* *How to use Me?*"
             f"\n\n• Firstly Add {dispatcher.bot.first_name} to your group by pressing [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
             f"\n• After adding promote me manually with full rights for faster experience.\n"
-            f"\n• Than send `/admincache@SuzuneV2` in that chat to refresh admin list in My database.\n"
+            f"\n• Than send `/admincache@Suzune_Superbot` in that chat to refresh admin list in My database.\n"
             f"\n\n*All done now use below given button's to know about use!*\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
