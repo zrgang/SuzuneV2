@@ -359,7 +359,7 @@ def Suzune_about_callback(update, context):
     query = update.callback_query
     if query.data == "Suzune_":
         query.message.edit_text(
-            text=""" SUZUNE - A bot to manage your groups with additional features!
+            text=""" Suzune Horikita - A bot to manage your groups with additional features!
             \nHere's the basic help regarding use of Innexia.
             
             \nAlmost all modules usage defined in the help menu, checkout by sending `/help`
